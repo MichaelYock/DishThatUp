@@ -1,7 +1,7 @@
 items:
   - text: Meals Plans
-    url: "#"
+    url: "/mealplans"
   - text: Recipes
-    url: /blog
+    url: "/recipes"
   - text: About
-    url: "#"
+    url: "/about"
