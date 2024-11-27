@@ -1,11 +1,15 @@
 ---
 layout: blog
+pagination:
+    data: collections.post
+    size: 2
+    alias: posts
+    reverse: true
 ---
 
 <section class="mt-15">
-    {% set postslist = collections.post %}
 
-    {% for post in postslist | reverse %}
+    {% for post in posts %}
         <article class="my-8">
             
             {% if post.data.featureImage %}
@@ -46,4 +50,7 @@ layout: blog
 
         </article>
     {% endfor %}
+
+    {% if pagination.href.previous %} <a href="{{ pagination.href.previous }}" class="text-indigo-500 font-bold text-lg">Previous</a> {% endif %}
+    {% if pagination.href.next %} <a href="{{ pagination.href.next }}" class="text-indigo-500 font-bold text-lg">Next</a> {% endif %}
 </section>

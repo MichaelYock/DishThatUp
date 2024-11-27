@@ -1,4 +1,6 @@
 items:
+  - text: Home
+    url: "/"
   - text: Meals Plans
     url: "/mealplans"
   - text: Recipes
