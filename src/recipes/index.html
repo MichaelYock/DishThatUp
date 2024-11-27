@@ -10,14 +10,17 @@ pagination:
 <section class="mt-15">
 
     {% for post in posts %}
-        <article class="my-8">
+    <a href="{{ post.url | url }}">
+        <article class="my-8 border rounded border-gray-200 hover:border-purple-400">
             
             {% if post.data.featureImage %}
-            <a href="{{ post.url | url }}">
-                <img class="w-full" src="{{post.data.featureImage}}">
-            </a>
-            {% endif %}
             
+                <img class="w-full" src="{{post.data.featureImage}}">
+            
+            {% endif %}
+
+
+            <div class="p-5">
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
@@ -47,10 +50,12 @@ pagination:
                     Read more →
                 </a>
             </p>
-
+            </div>
+        
         </article>
+    </a>
     {% endfor %}
 
-    {% if pagination.href.previous %} <a href="{{ pagination.href.previous }}" class="text-indigo-500 font-bold text-lg">Previous</a> {% endif %}
-    {% if pagination.href.next %} <a href="{{ pagination.href.next }}" class="text-indigo-500 font-bold text-lg">Next</a> {% endif %}
+    {% if pagination.href.previous %} <a href="{{ pagination.href.previous }}" class="text-indigo-500 font-bold text-lg">← Previous</a> {% endif %}
+    {% if pagination.href.next %} <a href="{{ pagination.href.next }}" class="text-indigo-500 font-bold text-lg">Next →</a> {% endif %}
 </section>
