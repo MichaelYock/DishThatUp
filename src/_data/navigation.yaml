@@ -1,8 +1,8 @@
 items:
   - text: Home
     url: "/"
-  - text: Meals Plans
-    url: "/mealplans"
+  - text: Meal Delivery
+    url: "/mealdelivery"
   - text: Recipes
     url: "/recipes"
   - text: About
