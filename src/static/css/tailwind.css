@@ -4,6 +4,11 @@
 
 /*Your Custom CSS Goes here*/
 
+@font-face {
+  font-family: Norwester;
+  src: url("/static/fonts/Norwester-Regular.woff") format("woff");
+}
+
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
 }
@@ -11,6 +16,8 @@ h1 {
 h3 {
   @apply text-2xl font-bold mb-3;
 }
+
+
 
 /* Syntax Highlighting*/
 

@@ -4,23 +4,21 @@ title: DISHTHATUP
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+<div class="container mx-auto py-20 border-b border-gray-200">
 
-  <div class="container flex flex-row justify-evenly space-x-4">
+  <div class="flex flex-col md:flex-row justify-evenly md:gap-x-4 md:-ml-4" >
 
   {% for post in collections.post | reverse %}
-    {% if loop.index0 < 3 %} 
-    
-    <article class="w-1/3 my-8 border rounded border-gray-200 hover:border-purple-400 grow-1 shrink-0">
+    {% if loop.index0 < 3 %}
+
+    <a href="{{ post.url | url }}">
+      
+  
+    <article class="flex-1 my-8 border rounded-lg border-gray-200 hover:border-purple-400 grow-1 shrink-0 overflow-hidden">
             
       {% if post.data.featureImage %}
       
-          <img class="w-full" src="{{post.data.featureImage}}">
+          <img class="w-full aspect-square overflow-hidden" src="{{post.data.featureImage}}">
       
       {% endif %}
 
@@ -38,13 +36,39 @@ path: home
 
       <p>
           <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-              Read more →
+              See Recipe →
           </a>
       </p>
   </article>
   
     
     {% endif %}
+  </a>
   {% endfor %}
+
+  </div>
+
+  <a href="/recipes" class="text-indigo-500 font-bold text-3xl mb-2 p-6">
+    See More Recipies →
+  </a>
+</div>
+
+<div class="container mx-auto py-20 border-b border-gray-200">
+  <h2 class="text-gray-900 font-bold text-5xl mb-2">Meal Delivery In Phnom Penh</h2>
+  <h3 class="text-gray-600 font-medium text-2xl">Weekly set menu delivered to you, available in Phnom Penh</h3>
+</div>
+
+  
+
+<div class="container mx-auto py-20 border-b border-gray-200">
+  <div class="container flex flex-col md:flex-row md:space-x-12">
+    <div class="w-full md:w-1/3 flex justify-center">
+      <img src="/static/img/goat.jpg" class="w-3/5 rounded-full aspect-square overflow-hidden">
+    </div>
+    
+    <div class="w-full md:w-2/3 mt-10">
+      <h2 class="font-bold text-3xl text-gray-900 mb-2">Im A Silly Billy,</h2>
+      <p class="prose lg:prose-xl">I make yum things and ride around on a scooter delivering them to ungrateful fools all over town. When not grazing on the finest Cambodian beers (with ice), Im busy whipping up baaa-rilliant dishes that will leave you saying, ‘I didn’t know a goat could cook like that!’</p>
+    </div>
   </div>
 </div>

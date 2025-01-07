@@ -1,9 +1,9 @@
 items:
   - text: Home
     url: "/"
-  - text: Meal Delivery
-    url: "/mealdelivery"
   - text: Recipes
     url: "/recipes"
+  - text: Meal Delivery
+    url: "/mealdelivery"
   - text: About
     url: "/about"
