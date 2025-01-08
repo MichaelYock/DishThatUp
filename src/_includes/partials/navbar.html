@@ -1,7 +1,7 @@
 <div class="w-full">
     <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto border-b border-gray-200" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
         <!--Logo etc-->
-            <a href="/" class="w-1/2 md:w-1/4"><img src="/static/img/DISHTHATUP.svg">
+            <a href="/" class="flex w-1/2 md:w-full md:justify-center"><img class="" src="/static/img/DISHTHATUP.svg">
             </a>
 
         <!--Toggle button (hidden on large screens)-->
@@ -13,11 +13,11 @@
         </button>
 
         <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
 
             {% if navigation.items %}
 
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
+                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-center flex-1 items-center">
                     {% for item in navigation.items %}
                         <li class="nav__item mr-3">
                             <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
