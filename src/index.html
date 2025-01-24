@@ -4,21 +4,21 @@ title: DISHTHATUP
 path: home
 ---
 
-<div class="container mx-auto px-4 md:px-0 md:pb-20 border-b border-gray-200">
+<div class="container mx-auto ml-4 md:px-0 pb-20 border-b border-gray-200 overflow-visible">
 
   <h2 class="text-gray-900 font-bold text-3xl pt-10">
     Featured Recipies
   </h2>
 
-  <div class="swiper featuredSwiper">
-    <div class="swiper-wrapper gap-x-4">
+  <div class="swiper featuredSwiper overflow-visible">
+    <div class="swiper-wrapper gap-x-4 overflow-visible">
       {% for post in collections.post | reverse %}
         {% if loop.index0 < 3 %}
         <div class="swiper-slide border rounded-lg border-gray-200 hover:border-purple-400 overflow-hidden my-8">
             <img class="object-cover w-full aspect-square" src="{{post.data.featureImage}}"
                 alt="image" />
                 <div class="p-5">
-                  <h3 class="font-bold text-2xl text-gray-900 mb-2">
+                  <h3 class="font-bold text-xl text-gray-900 mb-2">
                       <a href="{{ post.url | url }}">
                           {% if post.data.title %}
                               {{ post.data.title }}
