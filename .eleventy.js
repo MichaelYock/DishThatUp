@@ -4,6 +4,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
